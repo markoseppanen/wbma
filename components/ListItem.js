@@ -21,13 +21,16 @@ const styles = StyleSheet.create({
     padding: 5,
     margin: 5,
     marginLeft: 7,
-    backgroundColor: '#fff',
+    backgroundColor: '#E7D7C1',
     width: '95%',
+    borderRadius: 5,
   },
   image: {
     flex: 1,
     width: '100%',
     height: '100%',
+    resizeMode: 'contain',
+    borderRadius: 5,
   },
   textbox: {
     flex: 2,
@@ -36,6 +39,7 @@ const styles = StyleSheet.create({
   textboxHeader: {
     fontSize: 20,
     fontWeight: 'bold',
+    color: '#C15721',
   },
 });
 
