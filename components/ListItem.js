@@ -1,10 +1,15 @@
 import React from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
+const uploads = 'http://media.mw.metropolia.fi/wbma/uploads';
+
 const ListItem = ({singleMedia: item}) => {
   return (
     <TouchableOpacity style={styles.imagebox}>
-      <Image style={styles.image} source={{uri: item.thumbnails.w160}} />
+      <Image
+        style={styles.image}
+        source={{uri: `${uploads}/${item.thumbnails.w320}`}}
+      />
       <View style={styles.textbox}>
         <Text style={styles.textboxHeader}>{item.title}</Text>
         <Text>{item.description}</Text>
@@ -20,7 +25,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 5,
     margin: 5,
-    marginLeft: 7,
     backgroundColor: '#E7D7C1',
     width: '95%',
     borderRadius: 5,
