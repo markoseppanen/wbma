@@ -12,9 +12,9 @@ const useLoadMedia = () => {
 
       const media = await Promise.all(
         listJson.map(async (item) => {
-          const response = await fetch(`${url}/media/${item.file_id}`);
-          const json = await response.json();
-          return json;
+          const singleResponse = await fetch(`${url}/media/${item.file_id}`);
+          const singleJson = await singleResponse.json();
+          return singleJson;
         })
       );
 
